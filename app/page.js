@@ -64,7 +64,7 @@ export default function Home() {
           </div>
 
           <p style={{ color: "darkgray" }}>
-            there is nothing better than mano mughal
+              Securely store and manage your passwords in one place
           </p>
         </div>
 

@@ -9,7 +9,7 @@ const Footer = () => {
           Pass
           <span style={{ color: "green" }}>OP/&gt;</span>
         </div>
-        <p>there is nothing better than mano mughal</p>
+        <p>  © 2026 Password Manager. All rights reserved.</p>
       </div>
     </div>
   );
