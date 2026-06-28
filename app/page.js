@@ -105,46 +105,47 @@ export default function Home() {
         </form>
       </section>
 
-      <section className={styles.section2}>
-        <div className={styles.wrapper}>
-          <h3>Your Passwords</h3>
+    <section className={styles.section2}>
+  <div className={styles.wrapper}>
+    <h3>Your Passwords</h3>
 
-          <div className={styles.menu}>
-            <div className={styles.span}>
-              <h4>username</h4>
-              <h4>password</h4>
-              <h4>actions</h4>
-            </div>
+    <div className={styles.menu}>
+      <div className={styles.span}>
+        <h4>Username</h4>
+        <h4>Password</h4>
+        <h4>Actions</h4>
+      </div>
+    </div>
 
-            {array.length === 0 ? (
-              <p style={{ color: "black" }}>No item added</p>
-            ) : (
-              array.map((elem, idx) => (
-                <div className={styles.main} key={idx}>
-                  <h4>{elem.username}</h4>
-                  <h4>{elem.password}</h4>
+    {array.length === 0 ? (
+      <p style={{ color: "black", marginTop: "15px" }}>No item added</p>
+    ) : (
+      array.map((elem, idx) => (
+        <div className={styles.main} key={idx}>
+          <h4>{elem.username}</h4>
 
-                  <div>
-                    <lord-icon
-                      src="/wired-outline-35-edit-in-dynamic.json"
-                      trigger="loop"
-                      style={{ width: "24px", height: "24px" }}
-                      onClick={() => editHandler(elem, idx)}
-                    ></lord-icon>
+          <h4>{elem.password}</h4>
 
-                    <lord-icon
-                      src="/wired-outline-185-trash-bin-morph-trash-in.json"
-                      trigger="hover"
-                      style={{ width: "24px", height: "24px" }}
-                      onClick={() => deleteHandle(idx)}
-                    ></lord-icon>
-                  </div>
-                </div>
-              ))
-            )}
+          <div>
+            <lord-icon
+              src="/wired-outline-35-edit-in-dynamic.json"
+              trigger="loop"
+              style={{ width: "24px", height: "24px", cursor: "pointer" }}
+              onClick={() => editHandler(elem, idx)}
+            ></lord-icon>
+
+            <lord-icon
+              src="/wired-outline-185-trash-bin-morph-trash-in.json"
+              trigger="hover"
+              style={{ width: "24px", height: "24px", cursor: "pointer" }}
+              onClick={() => deleteHandle(idx)}
+            ></lord-icon>
           </div>
         </div>
-      </section>
+      ))
+    )}
+  </div>
+</section>
     </div>
   );
 }
