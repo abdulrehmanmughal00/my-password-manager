@@ -9,7 +9,6 @@ const Navbar = () => {
         <span style={{ color: "green" }}>OP/&gt;</span>
       </div>
       <div className={styles.login}>
-        {/* <button className={styles.loginBtn}>Login</button> */}
       </div>
     </nav>
   );

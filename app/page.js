@@ -6,15 +6,14 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function Home() {
   const [info, setInfo] = useState({ username: "", password: "" });
-  const [array, setArray] = useState([]);
   const [display, setDisplay] = useState(true);
   const [editIndex, setEditIndex] = useState(null);
-
+  const [array, setArray] = useState([]);
   useEffect(() => {
     const saveData = JSON.parse(localStorage.getItem("details")) || [];
     setArray(saveData);
   }, []);
-        
+
   let deleteHandle = (id) => {
     let filtered = array.filter((item, index) => index !== id);
     setArray(filtered);
